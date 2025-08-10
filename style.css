@@ -1,22 +1,21 @@
 body {
   margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: #0a0f13;
   color: #e0e5ec;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 2em;
 }
 
 .container {
+  max-width: 900px;
   text-align: center;
-  animation: fadeIn 1.5s ease-in;
 }
 
 h1 {
   font-size: 4rem;
-  margin: 0 0 0.5em;
+  margin-bottom: 0.5em;
   color: #00eaff;
   text-shadow: 0 0 10px rgba(0, 234, 255, 0.7);
 }
@@ -43,7 +42,26 @@ h1 {
   box-shadow: 0 0 20px rgba(0, 234, 255, 1);
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.gallery-title {
+  margin-top: 2em;
+  font-size: 2rem;
+  color: #00eaff;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 234, 255, 0.7);
 }
