@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0a0f13;
+  color: #e0e5ec;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  text-align: center;
+  animation: fadeIn 1.5s ease-in;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 0 0 0.5em;
+  color: #00eaff;
+  text-shadow: 0 0 10px rgba(0, 234, 255, 0.7);
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 0.8em 2em;
+  font-size: 1.2rem;
+  color: #0a0f13;
+  background: #00eaff;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0, 234, 255, 0.7);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(0, 234, 255, 1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
