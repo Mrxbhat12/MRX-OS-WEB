@@ -4,6 +4,44 @@
   <meta charset="UTF-8">
   <title>MRX OS</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .donation-box {
+      text-align: center;
+      margin: 30px 0;
+      padding: 20px;
+      background: #111;
+      color: #fff;
+      border-radius: 12px;
+    }
+    .wallet {
+      font-size: 16px;
+      background: #222;
+      padding: 10px;
+      border-radius: 8px;
+      display: inline-block;
+      margin: 10px 0;
+      word-break: break-all;
+    }
+    .copy-btn {
+      margin-top: 10px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      background: #f7931a;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .copy-btn:hover {
+      background: #d07c16;
+    }
+    .thanks {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #0f0;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -13,7 +51,16 @@
 History and Development
 
 MRX OS was created by Algerian programmer MRX BHAT, who aimed to build an operating system that meets the needs of Algerian and Arab users, and reflects the capabilities of local developers in low-level software engineering. The project was launched in response to the desire to offer an alternative to well-known operating systems such as Linux and Windows, with the ambition of making MRX OS one of the most successful operating systems worldwide.</p>
+    
     <a class="download-btn" href="https://www.mediafire.com/file/rw7ms9cjobepeh7/MRXOS.iso/file" target="_blank">تحميل MRX OS iso</a>
+
+    <div class="donation-box">
+      <h2>💰 لدعم المشروع</h2>
+      <div class="wallet" id="wallet">TRC20 USDT: TPxakUKjjjetx7aajxPmT3jSgWXdUPGWNF</div>
+      <br>
+      <button class="copy-btn" onclick="copyWallet()">📋 نسخ العنوان</button>
+      <p class="thanks">أول تبرع: 1.4$ ❤ شكراً</p>
+    </div>
 
     <h2 class="gallery-title">صور من النظام</h2>
     <div class="gallery">
@@ -23,6 +70,15 @@ MRX OS was created by Algerian programmer MRX BHAT, who aimed to build an operat
       <img src="screen4.jpg" alt="MRX OS">
     </div>
   </div>
+
+  <script>
+    function copyWallet() {
+      const walletText = document.getElementById("wallet").innerText;
+      navigator.clipboard.writeText(walletText);
+      alert("تم نسخ عنوان المحفظة ✅");
+    }
+  </script>
+
   <script src="https://cdn.counter.dev/script.js" data-id="d3952663-437a-456a-acad-ff2bdfb26b7b" data-utcoffset="1"></script>
 </body>
 </html>
